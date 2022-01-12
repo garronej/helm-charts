@@ -7,7 +7,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - run: |
           git config user.name "actions"
           git config user.email "actions@github.com"
@@ -19,8 +19,9 @@ jobs:
       # Following is just for the icons
       - uses: actions/setup-node@v2.1.3
         with:
-          node-version: '16'
+          node-version: '15'
+      - run: ls -la
       - run: git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${{github.repository}}.git
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: npx -y -p gh-pages@3.1.0 gh-pages ./icons --dest icons --add -u "github-actions-bot <actions@github.com>" 
+      - run: npx -y -p gh-pages@3.1.0 gh-pages -d ./icons --dest icons --add -u "github-actions-bot <actions@github.com>" 
