@@ -1,7 +1,7 @@
 apiVersion: v2
-name: onyxia
-description: Onyxia is your datalab's hub.
-icon: https://onyxia.lab.sspcloud.fr/onyxia.svg
+name: publiccode-editor
+description: An editor to create and edit publiccode.yml files.
+icon: https://etalab.github.io/helm-charts/assets/publiccode-editor.svg
 # A chart can be either an 'application' or a 'library' chart.
 #
 # Application charts are a collection of templates that can be packaged into versioned archives
@@ -14,8 +14,9 @@ type: application
 
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
-version: 3.0.0
+version: 0.0.1
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application.
-appVersion: 1.0.0
+appVersion: "v1.4.2"
+
