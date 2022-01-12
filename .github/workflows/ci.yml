@@ -15,4 +15,12 @@ jobs:
         with:
           charts_dir: charts
         env:
-          CR_TOKEN: "${{ secrets.PAT }}"
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      # Following is just for the icons
+      - uses: actions/setup-node@v2.1.3
+        with:
+          node-version: '16'
+      - run: git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${{github.repository}}.git
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: npx -y -p gh-pages@3.1.0 gh-pages -d ./icons --dest icons --add -u "github-actions-bot <actions@github.com>" 

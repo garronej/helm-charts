@@ -1,7 +1,7 @@
 apiVersion: v2
 name: publiccode-editor
 description: An editor to create and edit publiccode.yml files.
-icon: https://etalab.github.io/helm-charts/assets/publiccode-editor.svg
+icon: https://etalab.github.io/helm-charts/icons/publiccode-editor.svg
 # A chart can be either an 'application' or a 'library' chart.
 #
 # Application charts are a collection of templates that can be packaged into versioned archives
