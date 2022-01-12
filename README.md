@@ -1,5 +1,5 @@
 <p align="center">
-    <i>Various charts used <a href="https://www.etalab.gouv.fr">Etalab</a></i>
+    <i>Various charts used at <a href="https://www.etalab.gouv.fr">Etalab</a></i>
     <br>
     <br>
     <a href="https://github.com/etalab/helm-charts/actions">
