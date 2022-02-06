@@ -1,9 +1,0 @@
-dependencies:
-- name: mariadb
-  repository: https://charts.bitnami.com/bitnami
-  version: 10.3.2
-- name: library-chart
-  repository: https://inseefrlab.github.io/helm-charts-datascience
-  version: 2.0.20
-digest: sha256:f2d23f08d55f6e79e72b07c8a4a688b9dac06c46c999de74f2d0d15ad8021930
-generated: "2022-02-06T15:31:10.776936591Z"
