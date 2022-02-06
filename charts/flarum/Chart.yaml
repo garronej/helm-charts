@@ -21,7 +21,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 0.0.1
+version: 0.0.2
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
@@ -29,9 +29,8 @@ version: 0.0.1
 appVersion: "v1.2.0"
 dependencies:
   - name: mariadb
-    version: 10.5.13
-    repository:  https://charts.bitnami.com/mariadb
-    enabled: false
+    version: "10.3.2"
+    repository:  https://charts.bitnami.com/bitnami
   - name: library-chart
     version: 2.0.20
     repository: https://inseefrlab.github.io/helm-charts-datascience

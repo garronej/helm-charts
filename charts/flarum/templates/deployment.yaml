@@ -49,7 +49,18 @@ spec:
             periodSeconds: 20
           resources:
             {{- toYaml .Values.resources | nindent 12 }}         
-
+      initContainers:
+        - name: wait-for-mariadb
+          image: "alpine"
+          imagePullPolicy: IfNotPresent
+          command:
+            - sh
+            - -c
+            - |
+              until printf "." && nc -z -w 2 {{ .Values.mariadb.fullnameOverride }} 3306; do
+                  sleep 2;
+              done;
+              echo 'MariaDB OK ✓'
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

@@ -79,3 +79,11 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+mariadb:
+  auth: 
+    rootPassword: "admin"
+    database: flarum
+    username: "admin"
+    password: "admin"
+  fullnameOverride: "mariadb-flarum"
